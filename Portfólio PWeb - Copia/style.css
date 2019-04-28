@@ -1,0 +1,281 @@
+/* Resetando a página para que todos os navegadores fiquem iguais */
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px; /* resetando a página para que todos os navegadores fiquem iguais */
+}
+
+img {
+  max-width: 100%; /* imagem ficar 100% na tela */
+}
+
+html {
+  scroll-behavior: smooth; /*esse metodo rola o html todo devagar */
+}
+
+body {
+font-family: "Arial Black", sans-serif; /*Mudado a fonte para o mais prioritário da esquerda para a direita */
+}
+
+/* HEADER */
+header {
+  background-color: white; /* Cor de fundo do header */
+  background-image: url(Cleiton.JPG); /*imagem do header */
+  background-position: center; /* Centralizando a a posição para o centro */
+  background-repeat: no-repeat; /* Para não repetir várias vezes a imagem */
+  background-size: contain; /* Para a imagem cobrir o header inteiro */
+  text-align: center; /* alinhando as linhas do header para o centro */
+  color: Blue; /* Todas os textos do header com a msm cor */
+  height: 100vh; /* Altura */
+  display: flex; /* Organizando para ficar flexivel e deixar legivel em todas as telas */
+  flex-flow: column; /* Ficar os textos em colunas */
+  align-items: center; /* Alinhando os items para o centro da tela */
+  justify-content: center; /* Ajustando os itens flex no container para o centro */
+  background-attachment: fixed; /* Determinando a imagem para fixa para nao rolar junto com o bloco */
+}
+
+@media (min-width: 1024px) { /* Ajustando o titulo para telas a partir de 1024 px */
+header {
+  background-image: url(Cleiton.JPG);
+  background-size: cover;
+}
+
+header h1 {
+  text-transform: uppercase; /* O texto ficara maiusculo  */
+  font-size: 32px; /* Tamanho da fonte do texto */
+}
+
+@media (min-width: 768px) { /* Ajustando o titulo para telas a partir de 768 px */
+  header h1 {
+    font-size: 48px;
+  }
+}
+
+@media (min-width: 1024px) { /* Ajustando o titulo para telas a partir de 1024 px */
+  header h1 {
+    font-size: 60px;
+  }
+}
+
+header h2{
+  margin: 25px 0; /* margem do h2 para cima e para baixo 25 px e para os lados 0 px*/
+  font-size: 24px;/* fonte do h2 */
+}
+
+@media (min-width: 768px) {
+  header h2 {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  header h2 {
+    font-size: 48px;
+  }
+}
+
+header a {
+  display: inline-block; /* empilhando e colocando os itens um no lado do outro */
+  background-color: #000;
+  border-radius: 4px;
+  padding: 0px 16px;
+  color: skyblue;
+  text-decoration: none; /* sem as bolinhas no item */
+  font-size: 18px;
+}
+
+@media (min-width: 768px) {
+  header a {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  header a {
+    font-size: 32px;
+  }
+}
+
+.lista-destaques {
+  list-style: none;
+}
+
+@media (min-width: 1024px) {
+  .lista-destaques {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    margin: 30px 0;
+  }
+}
+
+.item-destaques {
+  margin: 20px;
+  text-align: center;
+}
+
+.imagem-destaques {
+  border-radius: 50%;
+  object-fit: fill;
+  width: 300px;
+  height: 300px;
+}
+
+.paragrafo-destaques {
+  font-size: 30px;
+  margin-top: 8px;
+}
+
+.secao-apresentacao {
+  background-color: #fafafa;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .secao-apresentacao {
+    padding: 20px 10vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .secao-apresentacao {
+    align-items: flex-start;
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: space-between;
+  }
+
+
+.texto-apresentacao {
+  width: 40%;
+  }
+  .secao-apresentacao-contrario .texto-apresentacao {
+    order: 2;
+  }
+}
+.titulo-apresentacao {
+  font-size: 36px;
+  text-transform: uppercase;
+  margin: 12px 0;
+  width: 100%
+}
+
+.secao-apresentacao-contrario .titulo-apresentacao {
+  text-align: right;
+}
+
+.paragrafo-apresentacao {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+@media (min-width: 768px) {
+  .paragrafo-apresentacao {
+    margin: 20px 0;
+    text-align: justify;
+  }
+}
+
+.imagem-apresentacao {
+  margin-top: 12px;
+}
+
+@media(min-width: 1024px) {
+  .imagem-apresentacao {
+    object-fit: contain;
+    width: 40%;
+  }
+}
+
+.secao-faixa {
+  padding: 10vh;
+  text-align: center;
+  background-color: Black;
+}
+
+.faixa-titulo {
+  font-size: 32px;
+  color: skyblue;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.secao-contato{
+  background-color: black;
+  padding: 20px;
+  color: #fff;
+}
+
+@media (min-width: 1024px) {
+  .secao-contato {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5vh 10vw;
+  }
+}
+
+.titulo-contato{
+  text-align: center;
+  font-size: 32px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  width: 100%;
+  Color: #009cff;
+
+}
+
+.texto-contato {
+  margin: 40px 0;
+  max-width: 380px;
+}
+
+.paragrafo-contato {
+  text-align:center;
+  line-height: 20px;
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #009cff;
+}
+
+.link-contato {
+  color: #009cff;
+  text-decoration: none;
+  display: block;
+  padding: 10px 10px;
+  background-color: gray;
+  width: 200px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.rodape {
+  padding: 5vh 10vw;
+}
+
+.rodape-lista {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.rodape-item {
+  margin: auto 20px;
+}
+
+.rodape-link span {
+  font-size: 30px;
+}
+
+.fa-facebook-square {
+  color: blue;
+}
+
+.fa-instagram {
+   color: #fff;
+   background: #d6249f;
+   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+   box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+}
